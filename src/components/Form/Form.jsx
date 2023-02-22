@@ -1,4 +1,4 @@
-
+import css from './Form.module.css'
 import { Component } from "react";
 
 
@@ -8,8 +8,6 @@ export default class Form extends Component {
    number: ''
     }
 
-
-  
 
       handleNameChange = e => {
     const { name, value } = e.currentTarget;
@@ -32,9 +30,9 @@ export default class Form extends Component {
     render() {
         return (
              
-           <form onSubmit={this.handleSubmit}>  
-             <label >Name {/* <br />   */}
-               <input
+           <form className={css.form} onSubmit={this.handleSubmit}>  
+             <label className={css.label}>Name 
+               <input className={css.input}
                  value={this.state.name}
         onChange={this.handleNameChange}
            type="text"
@@ -43,25 +41,31 @@ export default class Form extends Component {
            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                         required
                       
-           style={{
+                style={{
+                marginLeft: 20,
              width: "300px",
            height: "40px"}}
                />
                 </label>
             
              
- <label >Number {/* <br /> */}
-               <input
+ <label className={css.label}> Number 
+               <input className={css.input}
                    value={this.state.number}
         onChange={this.handleNameChange}
   type="tel"
   name="number"
   pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
   title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-  required
+                required
+                
+                style={{
+                marginLeft: 20,
+             width: 300,
+           height: 40}}
 />
  </label>
-  <button type="submit">Add contact</button>
+  <button className={css.btn} type="submit">Add contact</button>
            </form>  
            
         )

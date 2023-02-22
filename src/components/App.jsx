@@ -16,7 +16,7 @@ state = {
  
   
   addContact = ({name, number}) => {
-  
+ 
  const { contacts } = this.state;
         console.log( contacts );
 
@@ -26,6 +26,7 @@ state = {
       number,
     }
  
+     console.log(contact)
     /* this.setState({ contacts:  data  }) */ //доступ к state Form на момент сабмита
           contacts.find(cont =>
       cont.name.toLowerCase().includes(contact.name.toLowerCase()) 
@@ -73,7 +74,10 @@ state = {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+           color: '#010101',
+           marginLeft: 30,
+          backgroundColor: 'powderblue',
+           
       }}
     >
  
