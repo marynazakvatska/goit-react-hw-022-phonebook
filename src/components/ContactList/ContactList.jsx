@@ -22,12 +22,12 @@ export default ContactList
 
 
 ContactList.propTypes = {
-     contacts: PropTypes.array.isRequired,
-   /*  contacts: PropTypes.arrayOf(
+  /*    contacts: PropTypes.array.isRequired, */
+    contacts: PropTypes.arrayOf(
      PropTypes.shape({
        id: PropTypes.any,
        name: PropTypes.string.isRequired,
-       number: PropTypes.number.isRequired
-  })), */
+       number: PropTypes.string.isRequired
+  })),
     onDelete: PropTypes.func.isRequired
 }
